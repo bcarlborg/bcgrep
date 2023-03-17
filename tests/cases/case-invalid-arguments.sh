@@ -32,7 +32,7 @@ fi
 # outputs the correct error message
 
 # lets put our expected output somewhere that we can reference it later
-echo "Usage: bcgrep PATTERN file" > $EXPECTED_OUTPUT_FILE
+echo "Usage: bcgrep PATTERN [FILE]" > $EXPECTED_OUTPUT_FILE
 
 # lets run our program without inputs and store the stderr message
 $BCGREP_EXECUTABLE 2> $PROGRAM_OUTPUT_FILE

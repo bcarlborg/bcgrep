@@ -6,7 +6,7 @@ int main(int argc, char *argv[]) {
   // at a minimum, we should at least have
   // the executable name and a pattern as input
   if (argc < 2) {
-    fprintf(stderr, "Usage: bcgrep PATTERN file\n");
+    fprintf(stderr, "Usage: bcgrep PATTERN [FILE]\n");
     return 1;
   }
 
