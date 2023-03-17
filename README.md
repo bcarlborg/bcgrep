@@ -5,7 +5,7 @@ This is my simple implementation of grep. This program was written purely for ed
 Work in progress! I will update this readme once the program evolves enough to be usable!
 
 ## Project dependencies
-In oder to build and run this project, you mearly need an installation of GNU make and a c11 compatible compiler. All scripts in this directory are written in posix compliant shell, and therefore can be run by most if not all shells (use dash for best results).
+In oder to build and run this project, you mearly need an installation of GNU make and a c17 compatible compiler (most compilers accept a flag `-std=c17` that will run it with the appropriate configuration). All scripts in this directory are written in posix compliant shell, and therefore can be run by most if not all shells (use dash for best results).
 
 ## Buid instructions
 This program uses a simple makefile that can be run with any reasonably up to date version of GNU Make.

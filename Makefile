@@ -1,7 +1,7 @@
 # tool macros
-CC ?= clang
+CC ?= gcc
 CXX ?= # FILL: the compiler
-CFLAGS := -Werror -Wall
+CFLAGS := -Werror -Wall -std=c17
 CXXFLAGS := # FILL: compile flags
 DBGFLAGS := -g
 COBJFLAGS := $(CFLAGS) -c
