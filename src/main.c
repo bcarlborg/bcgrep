@@ -6,7 +6,7 @@
 
 // searches a line for the pattern
 // line should be a null terminated string
-static void search_string(const char *str) { printf("%s\n", str); }
+static void search_string(const char *str) { printf("%s", str); }
 
 // process the input lines from a file
 // one by one.
@@ -50,6 +50,13 @@ static void repl() {
 
   for (;;) {
     if (!fgets(line, sizeof(line), stdin)) {
+      // fgets returns 0 in two cases:
+      // (1) end of file and (2) an error
+
+      // if it is the end of a file... just exit the loop
+      if (feof(stdin)) break;
+
+      // otherwise, there was an error we need to record
       fprintf(stderr, "ERROR: could not read line\n");
       exit(1);
     }
