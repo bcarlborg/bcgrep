@@ -18,6 +18,10 @@ cleanup_helper_files () {
 	rm -f $PROGRAM_OUTPUT_FILE $EXPECTED_OUTPUT_FILE
 }
 
+######################################################################
+# Test case 1
+# Running program with no inputs should exit with non-zero status
+######################################################################
 
 # first, lets check that running our program with no inputs
 # exits with a non-zero status
@@ -27,6 +31,12 @@ then
 	exit 1
 fi
 
+
+######################################################################
+# Test case 2
+# Running the program with no inputs should also exit with the expected
+# error message
+######################################################################
 
 # next, lets check that running our program with no inputs
 # outputs the correct error message

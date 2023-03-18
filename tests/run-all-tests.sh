@@ -44,6 +44,8 @@ echo "BEGINNING TESTS"
 
 # loop over each case- file in the test directory
 for case_file in "$TEST_CASES_DIRECTORY"/case-*; do
+
+	# give outselves a new line before every test run
 	echo 
 
 	# first lets be sure we can execute this file
@@ -60,12 +62,17 @@ for case_file in "$TEST_CASES_DIRECTORY"/case-*; do
 	then
 		echo "----> TEST PASSED"
 	else
+		# error messages get sort of crowded... lets add a newline
+		# so we can see more
 		echo 
 		echo "----> TEST FAILED -- see error message above"
 		TESTS_RAN_CLEANLY=false
 	fi
 
 done
+
+# one more newline because I like things spaceyyyy
+echo
 
 if [ "$TESTS_RAN_CLEANLY" = true ]
 then
